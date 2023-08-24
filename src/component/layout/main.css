@@ -1,37 +1,29 @@
-.main_page_container {
-    height: 60vh;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.footer_page_container {
+  width: 100vw;
+  margin-bottom: 50px; /* Adjust the margin to create space for the menu */
+  position: relative;
+}
   
-  .App {
-    display: flex;
-    justify-content: space-between;
-  }
+.circle {
+  width: 20vw;
+  height: 20vw;
+  border: 1px solid black;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Add this to position tooltips */
+}
   
-  .circle {
-    width: 20vw;
-    height: 15vh;
-    border: 1px solid black;
-    border-radius: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative; /* Add this to position tooltips */
-  }
-  
-  .circle-content {
-    margin-bottom: 10px; /* Create space between text and tooltip */
-  }
+
   
   .tooltip {
     position: absolute;
-    top: 100%; /* Position tooltip below the circle */
+    top: 50vh; /* Position tooltip below the circle */
     left: 50%;
-    width: 20vw;
+    height: 30vh;
+    width: 50vw;
     transform: translateX(-50%);
     background-color: #fff;
     border: 1px solid #000;
@@ -40,3 +32,10 @@
     justify-content: center;
     align-items: center;
   }
+
+  /* .slick-slide {
+    margin: 0 55px;
+  }
+  .slick-list {
+    margin: 0 -10px;
+  } */

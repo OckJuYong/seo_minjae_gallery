@@ -1,4 +1,15 @@
 .footer_page_container {
-    height: 15vh;
+    height: 50vh;
     border: 1px solid black;
+    display: flex;
 }
+
+.A_text {
+    width: -1000px;
+}
+
+
+
+
+
+
