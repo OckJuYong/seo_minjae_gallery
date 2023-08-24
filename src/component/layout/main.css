@@ -3,6 +3,20 @@
   margin-bottom: 50px; /* Adjust the margin to create space for the menu */
   position: relative;
 }
+
+/* .footer_page_container:hover {
+  color: blue;
+  background-color: blue;
+} */
+.slick-slider {
+  height: 35vh;
+}
+.circle-container {
+  /* height: 220px; */
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
   
 .circle {
   width: 20vw;
@@ -14,6 +28,10 @@
   justify-content: center;
   align-items: center;
   position: relative; /* Add this to position tooltips */
+  transition: transform 0.4s ease;
+}
+.circle:hover {
+  transform: scale(1.2);
 }
   
 
@@ -33,9 +51,3 @@
     align-items: center;
   }
 
-  /* .slick-slide {
-    margin: 0 55px;
-  }
-  .slick-list {
-    margin: 0 -10px;
-  } */
