@@ -1,41 +1,58 @@
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import './main.css';
 
 const Main = () => {
-  const [hoveredCircle, setHoveredCircle] = useState(null);
+  const [hoveredYear, setHoveredYear] = useState(null);
 
-  const handleMouseEnter = (circleIndex) => {
-    setHoveredCircle(circleIndex);
+  const handleMouseEnter = (year) => {
+    setHoveredYear(year);
   };
 
   const handleMouseLeave = () => {
-    setHoveredCircle(null);
+    setHoveredYear(null);
+  };
+
+  const settings = {
+    dots: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    centerMode: true,
+    autoplay: true,
+    autoplaySpeed: 5000
   };
 
   return (
-    <div className="main_page_container">
-      <div className="App">
-        {Array.from({ length: 4 }, (_, index) => (
+    <div className='footer_page_container'>
+      <Slider {...settings}>
+        {[2020, 2021, 2022, 2023, 2024].map((year) => (
           <div
-            className="circle"
-            key={index}
-            onMouseEnter={() => handleMouseEnter(index)}
+            key={year}
+            onMouseEnter={() => handleMouseEnter(year)}
             onMouseLeave={handleMouseLeave}
+            className='circle-container'
           >
-            <div className="circle-content">서민재 경력 {index + 2020}</div>
-            {hoveredCircle === index && (
-              <div className="tooltip">
-                {index + 2020}
-                    <br/> - 1 올해도 찢었다
-                    <br/> - 2 내년도 찢어줭 헤응
-                    <br/> - 3 
-                    <br/> - 4 
-                    <br/> - 5 
+            <div className={`circle ${hoveredYear === year ? 'hovered' : ''}`}>
+              <div className='circle-content'>{year}</div>
             </div>
+            {hoveredYear === year && ReactDOM.createPortal(
+              <div className='tooltip'>
+                      {year} - 1 :
+                <br />{year} - 2 :
+                <br />{year} - 3 :
+                <br />{year} - 4 :
+                <br />{year} - 5 :
+              </div>,
+              document.body
             )}
           </div>
         ))}
-      </div>
+      </Slider>
     </div>
   );
 };
