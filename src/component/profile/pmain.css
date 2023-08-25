@@ -1,0 +1,68 @@
+.main_container {
+    display: flex;
+}
+
+.Ockimg {
+    margin-left: 10vw;   
+}
+
+.MyName {
+    font-size: 1.5vw;
+}
+
+.juyong {
+    width: 50vh;
+    margin-left: 2vw;
+}
+
+
+/* 내 소개? */
+.introduction_MyName {
+    margin-top: 10vh;
+    margin-left: 5vw;
+    font-size: 2vw;
+
+}
+
+/* 취미 관심사 등등 */
+.Hover {
+    margin-left: 10vw;
+    font-size: 2vw;
+}
+
+/* 업적이나 경력사항 등 */
+.Misson {
+    margin-left: 8vw;
+    font-size: 1.5vw;
+
+}
+
+/* 전화번호 등 잡다한 정보들 */
+.My_information {
+    margin-left: 7vw;
+    font-size: 1.5vw;
+
+}
+
+/* 도표모양 업적 */
+table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    font-size: 1.1vw;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+.TableScrollContainer {
+    max-height: 300px; /* 최대 높이 설정 */
+    overflow: auto; /* 스크롤 적용 */
+}

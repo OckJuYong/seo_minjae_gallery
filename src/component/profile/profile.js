@@ -1,9 +1,16 @@
 import React from 'react';
+import Header from '../layout/header';
+import Pmain from './pmain';
 
 const Profile = () => {
     return (
-        <div>여긴 Profile부분이다.</div>
+        <div>
+            <Header />
+            <br />
+            <Pmain />
+        </div>
     )
 }
 
 export default Profile
+
